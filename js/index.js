@@ -61,3 +61,10 @@ logo.addEventListener('mousedown', event => {
 logo.addEventListener('mouseup', event => {
     gsap.to(logo, {duration: 3, scale: 1});
 });
+
+// Alert on canal image drag
+let canalImage = document.querySelector('.inverse-content > div > img');
+console.log(canalImage);
+canalImage.addEventListener('contextmenu', event => {
+    alert("Please don't copy our images");
+});
