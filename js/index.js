@@ -8,7 +8,7 @@ heroImage[0].addEventListener('click', event => {
     }
 });
 
-// Change text when t is pressed
+// Change adventure text color when t is pressed
 let adventureText = document.querySelectorAll('.inverse-content > .text-content');
 
 document.addEventListener('keypress', event => {
@@ -33,14 +33,20 @@ navLinks.forEach( el => {
     });
 });
 
-// Alert on copy to the clipboard
+// Alert on copy of fun text to the clipboard
 let funText = document.querySelector('.content-pick > .destination > p');
 funText.addEventListener('copy', event => {
     alert('You have copied text from the website! Use it wisely.');
 });
 
-// Change background color on mousemove
+// Change footer background color on mousemove
 let footer = document.querySelector('footer');
 footer.addEventListener('mousemove', event => {
     footer.style.background = '#' + Math.floor(Math.random()*16777215).toString(16);
+});
+
+// Animnate map image on dblclick
+let mapImage = document.querySelector('.img-content > img');
+mapImage.addEventListener('dblclick', event => {
+    gsap.to(mapImage, {duration: 3, rotation: 360});
 });
