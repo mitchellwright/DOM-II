@@ -62,9 +62,20 @@ logo.addEventListener('mouseup', event => {
     gsap.to(logo, {duration: 3, scale: 1});
 });
 
-// Alert on canal image drag
+// Alert on canal image contextmenu
 let canalImage = document.querySelector('.inverse-content > div > img');
-console.log(canalImage);
 canalImage.addEventListener('contextmenu', event => {
     alert("Please don't copy our images");
+});
+
+
+// Prevent eventPropagation
+
+
+// Prevent refreshing of the page on navigation click
+let navElements = document.querySelectorAll('nav > a');
+navElements.forEach( el => {
+    el.addEventListener('click', event => {
+        event.preventDefault();
+    });
 });
