@@ -22,3 +22,13 @@ let destinationImage = document.querySelectorAll('.content-destination > img');
 destinationImage[0].addEventListener('mouseenter', () => {
     gsap.from(destinationImage[0], {duration: 2, x: 300, opacity: 0, scale: 0.5});
 });
+
+// Rotate nav on wheel scroll
+let navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach( el => {
+    el.addEventListener('wheel', event => {
+        event.preventDefault();
+
+        el.style.transform = 'skew(-20deg)';
+    });
+});
