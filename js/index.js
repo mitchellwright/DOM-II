@@ -32,3 +32,9 @@ navLinks.forEach( el => {
         el.style.transform = 'skew(-20deg)';
     });
 });
+
+// Alert on copy to the clipboard
+let funText = document.querySelector('.content-pick > .destination > p');
+funText.addEventListener('copy', event => {
+    alert('You have copied text from the website!');
+});
