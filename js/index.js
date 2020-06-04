@@ -50,3 +50,14 @@ let mapImage = document.querySelector('.img-content > img');
 mapImage.addEventListener('dblclick', event => {
     gsap.to(mapImage, {duration: 3, rotation: 360});
 });
+
+// Shrink logo on mousedown
+let logo = document.querySelector('.logo-heading');
+logo.addEventListener('mousedown', event => {
+    gsap.to(logo, {duration: 3, scale: 0.5});
+});
+
+// Logo back to normal on mouseup
+logo.addEventListener('mouseup', event => {
+    gsap.to(logo, {duration: 3, scale: 1});
+});
