@@ -8,3 +8,12 @@ heroImage[0].addEventListener('click', event => {
     }
 });
 
+// Change text when t is pressed
+let adventureText = document.querySelectorAll('.inverse-content > .text-content');
+
+document.addEventListener('keypress', event => {
+    if(event.code === 'KeyT') {
+        adventureText.forEach(el => el.style.color = 'red');
+    }
+});
+
