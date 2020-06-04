@@ -36,5 +36,11 @@ navLinks.forEach( el => {
 // Alert on copy to the clipboard
 let funText = document.querySelector('.content-pick > .destination > p');
 funText.addEventListener('copy', event => {
-    alert('You have copied text from the website!');
+    alert('You have copied text from the website! Use it wisely.');
+});
+
+// Change background color on mousemove
+let footer = document.querySelector('footer');
+footer.addEventListener('mousemove', event => {
+    footer.style.background = '#' + Math.floor(Math.random()*16777215).toString(16);
 });
