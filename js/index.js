@@ -17,3 +17,8 @@ document.addEventListener('keypress', event => {
     }
 });
 
+// Animate destination image on mouseenter
+let destinationImage = document.querySelectorAll('.content-destination > img');
+destinationImage[0].addEventListener('mouseenter', () => {
+    gsap.from(destinationImage[0], {duration: 2, x: 300, opacity: 0, scale: 0.5});
+});
