@@ -7,3 +7,4 @@ heroImage[0].addEventListener('click', event => {
         event.target.style.width = '50%';
     }
 });
+
