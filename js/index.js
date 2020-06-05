@@ -70,7 +70,15 @@ canalImage.addEventListener('contextmenu', event => {
 
 
 // Prevent eventPropagation
-
+let goSpan = document.querySelector('.content-section > .text-content > p > span');
+let goParagraph = document.querySelector('.content-section > .text-content > p');
+goSpan.addEventListener('click', event => {
+    goSpan.style.fontSize = '5rem';
+    event.stopPropagation();
+});
+goParagraph.addEventListener('click', event => {
+    goParagraph.style.fontSize = '10rem';
+});
 
 // Prevent refreshing of the page on navigation click
 let navElements = document.querySelectorAll('nav > a');
